@@ -2,9 +2,7 @@ heumRolling
 ==============
 Jquery plugin Rolling
 
-online demo
-
-http://kwangheum.github.io/heumRolling/rolling.html
+you can see <a href="http://kwangheum.github.io/heumRolling/rolling.html">live demo</a>.
 
 ## Example
 
