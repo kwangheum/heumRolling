@@ -1,0 +1,265 @@
+<!docType html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8"/>
+		<title>basic.html</title>
+		<script src="../resources/jquery/jquery-1.11.1.min.js"></script>
+		<link rel="stylesheet" href="../resources/jquery.heum.rolling.css">
+		<script src="../resources/jquery.heum.rolling.min.js"></script>
+		<style>
+			table th{
+				height:30px;
+				vertical-align: middle;
+				border-bottom: 2px solid #ddd;
+			}
+			table tr th{
+				text-align: left;
+				padding-left:10px;			
+			}
+			table tr td{
+				padding: 8px;
+				line-height: 1.42857143;
+				vertical-align: middle;
+			}
+			table tr:nth-child(odd) td {
+			    background-color: #f9f9f9
+			}
+			table tr:not(:first-child) td{
+				border-top: 1px solid #ddd;
+			}
+			code{
+				padding: 2px 4px;
+				font-size: 90%;
+				color: #c7254e;
+				background-color: #f9f2f4;
+				white-space: nowrap;
+				border-radius: 4px;
+			}
+		</style>
+		<script>
+			$(window).load(function(){
+				$("#rolling").heumRolling();
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Basic</h1>
+		<p>가장 기본 입니다. rolling의 <code>그룹 사이즈=(아이템의 전체 넓이 - 마지막 아이템 넓이)</code>로 됩니다</p>
+		<h2 style="color:red">screen</h2>
+		<div style="padding: 30px;margin-bottom: 14px;border: 1px solid #e1e1e8;border-radius: 4px;">
+			<div id="rolling">
+				<ul class="heum-item-group">
+					<li class="item"><img src="../resources/images/facebook.gif"/></li>
+					<li class="item"><img src="../resources/images/twitter.gif"/></li>
+					<li class="item"><img src="../resources/images/facebook.gif"/></li>
+					<li class="item"><img src="../resources/images/twitter.gif"/></li>
+					<li class="item"><img src="../resources/images/facebook.gif"/></li>
+					<li class="item"><img src="../resources/images/twitter.gif"/></li>
+					<li class="item"><img src="../resources/images/facebook.gif"/></li>
+					<li class="item"><img src="../resources/images/twitter.gif"/></li>
+					<li class="item"><img src="../resources/images/facebook.gif"/></li>
+					<li class="item"><img src="../resources/images/twitter.gif"/></li>
+					<li class="item"><img src="../resources/images/facebook.gif"/></li>
+				</ul>
+			</div>
+		</div>
+		<h2 style="color:red">javascript</h2>
+		<div style="padding: 30px;margin-bottom: 14px;border: 1px solid #e1e1e8;border-radius: 4px;">
+			<ol style="margin: 0px; padding: 0px 0px 0px 48px; color: rgb(172, 172, 172); font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace, serif; font-size: 12px; line-height: 21px;">
+			    <li class="li1" style="-webkit-user-select: none;">
+			        <div class="de1" style="-webkit-user-select: text; padding: 0px 5px; vertical-align: top; color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204); margin: 0px 0px 0px -7px; position: relative; background-color: rgb(255, 255, 255);">$<span class="br0" style="color: rgb(0, 153, 0);">(</span>window<span class="br0" style="color: rgb(0, 153, 0);">)</span>.<span class="me1" style="color: rgb(102, 0, 102);">load</span><span class="br0" style="color: rgb(0, 153, 0);">(</span><span class="kw1" style="color: rgb(0, 0, 102); font-weight: bold;">function</span><span class="br0" style="color: rgb(0, 153, 0);">(</span><span class="br0" style="color: rgb(0, 153, 0);">)</span><span class="br0" style="color: rgb(0, 153, 0);">{</span>
+			        </div>
+			    </li>
+			    <li class="li2" style="-webkit-user-select: none;">
+			        <div class="de2" style="-webkit-user-select: text; padding: 0px 5px; vertical-align: top; color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204); margin: 0px 0px 0px -7px; position: relative; background-color: rgb(255, 255, 255);">&nbsp; &nbsp; &nbsp; &nbsp; $<span class="br0" style="color: rgb(0, 153, 0);">(</span><span class="st0" style="color: rgb(51, 102, 204);">"#rolling"</span><span class="br0" style="color: rgb(0, 153, 0);">)</span>.<span class="me1" style="color: rgb(102, 0, 102);">heumRolling</span><span class="br0" style="color: rgb(0, 153, 0);">(</span><span class="br0" style="color: rgb(0, 153, 0);">)</span><span class="sy0" style="color: rgb(51, 153, 51);">;</span>
+			        </div>
+			    </li>
+			    <li class="li1" style="-webkit-user-select: none;">
+			        <div class="de1" style="-webkit-user-select: text; padding: 0px 5px; vertical-align: top; color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204); margin: 0px 0px 0px -7px; position: relative; background-color: rgb(255, 255, 255);"><span class="br0" style="color: rgb(0, 153, 0);">}</span><span class="br0" style="color: rgb(0, 153, 0);">)</span><span class="sy0" style="color: rgb(51, 153, 51);">;</span>
+			        </div>
+			    </li>
+			</ol>
+		</div>
+		<h2 style="color:red">html</h2>
+		<div style="padding: 30px;margin-bottom: 14px;border: 1px solid #e1e1e8;border-radius: 4px;">
+			<ol style="margin: 0px; padding: 0px 0px 0px 48px; color: rgb(172, 172, 172); font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace, serif; font-size: 12px; line-height: 21px;">
+			    <li class="li1" style="-webkit-user-select: none;">
+			        <div class="de1" style="-webkit-user-select: text; padding: 0px 5px; vertical-align: top; color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204); margin: 0px 0px 0px -7px; position: relative; background-color: rgb(255, 255, 255);"><span class="sc2" style="color: rgb(0, 153, 0);">&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">div</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">id</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"rolling"</span>&gt;</span>
+			        </div>
+			    </li>
+			    <li class="li2" style="-webkit-user-select: none;">
+			        <div class="de2" style="-webkit-user-select: text; padding: 0px 5px; vertical-align: top; color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204); margin: 0px 0px 0px -7px; position: relative; background-color: rgb(255, 255, 255);">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="sc2" style="color: rgb(0, 153, 0);">&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">ul</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">class</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"heum-item-group"</span>&gt;</span>
+			        </div>
+			    </li>
+			    <li class="li1" style="-webkit-user-select: none;">
+			        <div class="de1" style="-webkit-user-select: text; padding: 0px 5px; vertical-align: top; color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204); margin: 0px 0px 0px -7px; position: relative; background-color: rgb(255, 255, 255);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="sc2" style="color: rgb(0, 153, 0);">&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">class</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"item"</span>&gt;&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">img</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">src</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"../resources/images/facebook.gif"</span><span class="sy0" style="color: rgb(102, 204, 102);">/</span>&gt;&lt;<span class="sy0" style="color: rgb(102, 204, 102);">/</span><span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&gt;</span>
+			        </div>
+			    </li>
+			    <li class="li2" style="-webkit-user-select: none;">
+			        <div class="de2" style="-webkit-user-select: text; padding: 0px 5px; vertical-align: top; color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204); margin: 0px 0px 0px -7px; position: relative; background-color: rgb(255, 255, 255);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="sc2" style="color: rgb(0, 153, 0);">&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">class</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"item"</span>&gt;&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">img</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">src</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"../resources/images/twitter.gif"</span><span class="sy0" style="color: rgb(102, 204, 102);">/</span>&gt;&lt;<span class="sy0" style="color: rgb(102, 204, 102);">/</span><span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&gt;</span>
+			        </div>
+			    </li>
+			    <li class="li1" style="-webkit-user-select: none;">
+			        <div class="de1" style="-webkit-user-select: text; padding: 0px 5px; vertical-align: top; color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204); margin: 0px 0px 0px -7px; position: relative; background-color: rgb(255, 255, 255);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="sc2" style="color: rgb(0, 153, 0);">&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">class</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"item"</span>&gt;&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">img</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">src</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"../resources/images/facebook.gif"</span><span class="sy0" style="color: rgb(102, 204, 102);">/</span>&gt;&lt;<span class="sy0" style="color: rgb(102, 204, 102);">/</span><span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&gt;</span>
+			        </div>
+			    </li>
+			    <li class="li2" style="-webkit-user-select: none;">
+			        <div class="de2" style="-webkit-user-select: text; padding: 0px 5px; vertical-align: top; color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204); margin: 0px 0px 0px -7px; position: relative; background-color: rgb(255, 255, 255);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="sc2" style="color: rgb(0, 153, 0);">&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">class</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"item"</span>&gt;&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">img</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">src</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"../resources/images/twitter.gif"</span><span class="sy0" style="color: rgb(102, 204, 102);">/</span>&gt;&lt;<span class="sy0" style="color: rgb(102, 204, 102);">/</span><span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&gt;</span>
+			        </div>
+			    </li>
+			    <li class="li1" style="-webkit-user-select: none;">
+			        <div class="de1" style="-webkit-user-select: text; padding: 0px 5px; vertical-align: top; color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204); margin: 0px 0px 0px -7px; position: relative; background-color: rgb(255, 255, 255);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="sc2" style="color: rgb(0, 153, 0);">&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">class</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"item"</span>&gt;&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">img</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">src</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"../resources/images/facebook.gif"</span><span class="sy0" style="color: rgb(102, 204, 102);">/</span>&gt;&lt;<span class="sy0" style="color: rgb(102, 204, 102);">/</span><span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&gt;</span>
+			        </div>
+			    </li>
+			    <li class="li2" style="-webkit-user-select: none;">
+			        <div class="de2" style="-webkit-user-select: text; padding: 0px 5px; vertical-align: top; color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204); margin: 0px 0px 0px -7px; position: relative; background-color: rgb(255, 255, 255);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="sc2" style="color: rgb(0, 153, 0);">&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">class</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"item"</span>&gt;&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">img</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">src</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"../resources/images/twitter.gif"</span><span class="sy0" style="color: rgb(102, 204, 102);">/</span>&gt;&lt;<span class="sy0" style="color: rgb(102, 204, 102);">/</span><span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&gt;</span>
+			        </div>
+			    </li>
+			    <li class="li1" style="-webkit-user-select: none;">
+			        <div class="de1" style="-webkit-user-select: text; padding: 0px 5px; vertical-align: top; color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204); margin: 0px 0px 0px -7px; position: relative; background-color: rgb(255, 255, 255);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="sc2" style="color: rgb(0, 153, 0);">&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">class</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"item"</span>&gt;&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">img</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">src</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"../resources/images/facebook.gif"</span><span class="sy0" style="color: rgb(102, 204, 102);">/</span>&gt;&lt;<span class="sy0" style="color: rgb(102, 204, 102);">/</span><span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&gt;</span>
+			        </div>
+			    </li>
+			    <li class="li2" style="-webkit-user-select: none;">
+			        <div class="de2" style="-webkit-user-select: text; padding: 0px 5px; vertical-align: top; color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204); margin: 0px 0px 0px -7px; position: relative; background-color: rgb(255, 255, 255);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="sc2" style="color: rgb(0, 153, 0);">&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">class</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"item"</span>&gt;&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">img</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">src</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"../resources/images/twitter.gif"</span><span class="sy0" style="color: rgb(102, 204, 102);">/</span>&gt;&lt;<span class="sy0" style="color: rgb(102, 204, 102);">/</span><span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&gt;</span>
+			        </div>
+			    </li>
+			    <li class="li1" style="-webkit-user-select: none;">
+			        <div class="de1" style="-webkit-user-select: text; padding: 0px 5px; vertical-align: top; color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204); margin: 0px 0px 0px -7px; position: relative; background-color: rgb(255, 255, 255);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="sc2" style="color: rgb(0, 153, 0);">&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">class</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"item"</span>&gt;&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">img</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">src</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"../resources/images/facebook.gif"</span><span class="sy0" style="color: rgb(102, 204, 102);">/</span>&gt;&lt;<span class="sy0" style="color: rgb(102, 204, 102);">/</span><span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&gt;</span>
+			        </div>
+			    </li>
+			    <li class="li2" style="-webkit-user-select: none;">
+			        <div class="de2" style="-webkit-user-select: text; padding: 0px 5px; vertical-align: top; color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204); margin: 0px 0px 0px -7px; position: relative; background-color: rgb(255, 255, 255);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="sc2" style="color: rgb(0, 153, 0);">&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">class</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"item"</span>&gt;&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">img</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">src</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"../resources/images/twitter.gif"</span><span class="sy0" style="color: rgb(102, 204, 102);">/</span>&gt;&lt;<span class="sy0" style="color: rgb(102, 204, 102);">/</span><span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&gt;</span>
+			        </div>
+			    </li>
+			    <li class="li1" style="-webkit-user-select: none;">
+			        <div class="de1" style="-webkit-user-select: text; padding: 0px 5px; vertical-align: top; color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204); margin: 0px 0px 0px -7px; position: relative; background-color: rgb(255, 255, 255);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="sc2" style="color: rgb(0, 153, 0);">&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">class</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"item"</span>&gt;&lt;<span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">img</span>&nbsp;<span class="kw3" style="color: rgb(0, 0, 102);">src</span><span class="sy0" style="color: rgb(102, 204, 102);">=</span><span class="st0" style="color: rgb(255, 0, 0);">"../resources/images/facebook.gif"</span><span class="sy0" style="color: rgb(102, 204, 102);">/</span>&gt;&lt;<span class="sy0" style="color: rgb(102, 204, 102);">/</span><span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">li</span>&gt;</span>
+			        </div>
+			    </li>
+			    <li class="li2" style="-webkit-user-select: none;">
+			        <div class="de2" style="-webkit-user-select: text; padding: 0px 5px; vertical-align: top; color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204); margin: 0px 0px 0px -7px; position: relative; background-color: rgb(255, 255, 255);">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="sc2" style="color: rgb(0, 153, 0);">&lt;<span class="sy0" style="color: rgb(102, 204, 102);">/</span><span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">ul</span>&gt;</span>
+			        </div>
+			    </li>
+			    <li class="li1" style="-webkit-user-select: none;">
+			        <div class="de1" style="-webkit-user-select: text; padding: 0px 5px; vertical-align: top; color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204); margin: 0px 0px 0px -7px; position: relative; background-color: rgb(255, 255, 255);"><span class="sc2" style="color: rgb(0, 153, 0);">&lt;<span class="sy0" style="color: rgb(102, 204, 102);">/</span><span class="kw2" style="color: rgb(0, 0, 0); font-weight: bold;">div</span>&gt;</span>
+			        </div>
+			    </li>
+			</ol>
+		</div>
+		<h2 style="color:red">Event</h2>
+		<div style="padding: 9px 14px;margin-bottom: 14px;border: 1px solid #e1e1e8;border-radius: 4px;">
+			<table cellspacing="0" cellpadding="0" border="0" style="width:100%;">
+				<colgroup>
+					<col width="20%"/>
+					<col width="80%"/>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Event Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>$(element).heumRolling().start()</td>
+						<td>롤링을 시작합니다</td>
+					</tr>
+					<tr>
+						<td>$(element).heumRolling().pause()</td>
+						<td>롤링을 멈춥니다</td>
+					</tr>
+					<tr>
+						<td>$(element).heumRolling().next()</td>
+						<td>다음 아이템으로 롤링합니다</td>
+					</tr>
+					<tr>
+						<td>$(element).heumRolling().prev()</td>
+						<td>이전 아이템으로 롤링합니다</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<h2 style="color:red">Option</h2>
+		<div style="padding: 9px 14px;margin-bottom: 14px;border: 1px solid #e1e1e8;border-radius: 4px;">
+			<table cellspacing="0" cellpadding="0" border="0" style="width:100%;">
+				<colgroup>
+					<col width="10%"/>
+					<col width="10%"/>
+					<col width="20%"/>
+					<col width="*%"/>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Default</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>scroll</td>
+						<td>String</td>
+						<td>horizontal</td>
+						<td>
+							세로 또는 가로를 지정해줍니다.<br/>
+							<code>horizontal(가로)</code><br/>
+							<code>vertical(세로)</code>
+						</td>
+					</tr>
+					<tr>
+						<td>rolling</td>
+						<td>String</td>
+						<td>next</td>
+						<td>
+							롤링 방향을 지정해줍니다.<br/>
+							<code>next(다음)</code><br/>
+							<code>prev(이전)</code>
+						</td>
+					</tr>
+					<tr>
+						<td>autoscroll</td>
+						<td>boolean</td>
+						<td>true</td>
+						<td>
+							초기에 스크롤을 할지의 여부입니다
+						</td>
+					</tr>
+					<tr>
+						<td>button</td>
+						<td>boolean</td>
+						<td>false</td>
+						<td>
+							버튼을 생성할지 말지의 여부입니다
+						</td>
+					</tr>
+					<tr>
+						<td>timer</td>
+						<td>Integer</td>
+						<td>5</td>
+						<td>
+							움직임의 시간을 초단위로 조절합니다.
+						</td>
+					</tr>
+					<tr>
+						<td>groupsize</td>
+						<td>Integer|String</td>
+						<td><span class="text-muted">null</span></td>
+						<td>
+							롤링 그룹의 크기를 지정합니다. 만약 값이 그룹 <code>사이즈=(아이템의 전체 넓이 - 마지막 아이템 넓이)</code> 로 계산됩니다
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<ul>
+			<li><a href="./basic.html">basic.html</a></li>
+			<li><a href="./button-data-attributes.html">button-data-attributes.html</a></li>
+			<li><a href="./button-javascript-action.html">button-javascript-action.html</a></li>
+			<li><a href="./button-option.html">button-option.html</a></li>
+			<li><a href="./scroll.html">scroll.html</a></li>
+			<li><a href="./rolling.html">rolling.html</a></li>
+			<li><a href="./groupsize.html">groupsize.html</a></li>
+			<li><a href="./timer.html">timer.html</a></li>
+		</ul>
+	</body>
+</html>

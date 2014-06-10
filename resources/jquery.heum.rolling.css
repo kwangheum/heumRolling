@@ -1,0 +1,17 @@
+ul.heum-item-group,ol.heum-item-group{
+	list-style: none;
+}
+.heum-rolling-group{
+	position:relative;
+	overflow:hidden;
+}
+.heum-item-group {
+	padding-left: 0px;
+	margin-top: 0px;
+}
+.heum-item-group .item{
+	margin:10px;
+}
+.heum-item-group .scroll-horizontal{
+	float:left;
+}
