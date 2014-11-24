@@ -29,7 +29,7 @@
 		var thisIndex = $(".heum-item-group").index(selector.find(".heum-item-group"));
 		heumRollingInitOptions[thisIndex] = options;
 	}
-	function eventHandler(event, selector) {
+	function heumRollingEventHandler(event, selector) {
 	    event.stopPropagation();
 	    event.preventDefault();
 	    if (event.type === 'touchend'){
@@ -53,7 +53,7 @@
 		heum_rolling(selector,rolling,scroll);
 		heumRollingBridge(selector,autoscroll,timer,rolling,scroll);
 	}
-	function buttonDisabled(selector,disabled){
+	function heumRollingButtonDisabled(selector,disabled){
 		if(disabled){
 			selector.find("*").filter(function() {
 				$(this).addClass("disabled");
@@ -68,7 +68,7 @@
 		});
 	}
 	function heum_rolling(selector,rolling,scroll){
-		buttonDisabled(selector,true);
+		heumRollingButtonDisabled(selector,true);
 		if(rolling=="prev"){
 			var element = selector.find(".heum-item-group .item:last");
 			if(scroll =="vertical"){
@@ -77,7 +77,7 @@
 				selector.find(".heum-item-group").animate({
 					"margin-top": "0px",
 				}, "slow",function(){
-					buttonDisabled(selector,false);
+					heumRollingButtonDisabled(selector,false);
 				});
 			}else{
 				selector.find(".heum-item-group").css({"margin-left": "-"+Math.abs(element.outerWidth(true))+"px"});
@@ -85,7 +85,7 @@
 				selector.find(".heum-item-group").animate({
 					"margin-left": "0px",
 				}, "slow",function(){
-					buttonDisabled(selector,false);
+					heumRollingButtonDisabled(selector,false);
 				});
 			}
 		}else{
@@ -103,7 +103,7 @@
 				}, "slow",function(){
 					selector.find(".heum-item-group").css({"margin-top":"0px"});
 					element.appendTo(selector.find(".heum-item-group"));
-					buttonDisabled(selector,false);
+					heumRollingButtonDisabled(selector,false);
 				});
 			}else{
 				selector.find(".heum-item-group").animate({
@@ -111,7 +111,7 @@
 				}, "slow",function(){
 					selector.find(".heum-item-group").css({"margin-left":"0px"});
 					element.appendTo(selector.find(".heum-item-group"));
-					buttonDisabled(selector,false);
+					heumRollingButtonDisabled(selector,false);
 				});
 			}
 		}
@@ -228,7 +228,7 @@
 						display : (!this.options.autoscroll?"":"none")
 					}
 				}).on("click touchend",function(event){
-					eventHandler(event, $(this));
+					heumRollingEventHandler(event, $(this));
 					$(this).hide();
 					pauseButton.show();
 					element.heumRolling().start();
@@ -244,7 +244,7 @@
 						display : (this.options.autoscroll?"":"none")
 					}
 				}).on("click touchend",function(event){
-					eventHandler(event, $(this));
+					heumRollingEventHandler(event, $(this));
 					$(this).hide();
 					startButton.show();
 					element.heumRolling().pause();
@@ -257,7 +257,7 @@
 						"heum-rolling" : "prev"
 					}
 				}).on("click touchend",function(event){
-					eventHandler(event, $(this));
+					heumRollingEventHandler(event, $(this));
 					element.heumRolling().prev();
 				}).appendTo(element);
 				$("<button/>",{
@@ -267,24 +267,24 @@
 						"heum-rolling" : "next"
 					}
 				}).on("click touchend",function(event){
-					eventHandler(event, $(this));
+					heumRollingEventHandler(event, $(this));
 					element.heumRolling().next();
 				}).appendTo(element);
 			}else{
 				element.find("*[data-heum-rolling=start]").on("click touchend",function(event){
-					eventHandler(event, $(this));
+					heumRollingEventHandler(event, $(this));
 					element.heumRolling().start();
 				});
 				element.find("*[data-heum-rolling=pause]").on("click touchend",function(event){
-					eventHandler(event, $(this));
+					heumRollingEventHandler(event, $(this));
 					element.heumRolling().pause();
 				});
 				element.find("*[data-heum-rolling=next]").on("click touchend",function(event){
-					eventHandler(event, $(this));
+					heumRollingEventHandler(event, $(this));
 					element.heumRolling().next();
 				});
 				element.find("*[data-heum-rolling=prev]").on("click touchend",function(event){
-					eventHandler(event, $(this));
+					heumRollingEventHandler(event, $(this));
 					element.heumRolling().prev();
 				});
 			}
