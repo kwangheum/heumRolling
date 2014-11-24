@@ -6,9 +6,9 @@
  * github : http://github.com/kwangheum
 */
 (function($, window, document, undefined) {
-	var initSetTimeout = new Array(),
-		scrollStatus  = new Array(),
-		initOptions = new Array(),
+	var heumRollingInitSetTimeout = new Array(),
+		heumRollingScrollStatus  = new Array(),
+		heumRollingInitOptions = new Array(),
 		pluginName = "heumRolling", 
 		defaults = {
 			scroll : "horizontal",//horizontal,vertical
@@ -25,9 +25,9 @@
 		this._name = pluginName;
 		this.init();
 	}
-	function setInitOption(selector, options){
+	function heumRollingSetInitOption(selector, options){
 		var thisIndex = $(".heum-item-group").index(selector.find(".heum-item-group"));
-		initOptions[thisIndex] = options;
+		heumRollingInitOptions[thisIndex] = options;
 	}
 	function eventHandler(event, selector) {
 	    event.stopPropagation();
@@ -36,22 +36,22 @@
 	        selector.off('click');
 	    }
 	}
-	function rollingBridge(selector,autoscroll,timer,rolling,scroll){
+	function heumRollingBridge(selector,autoscroll,timer,rolling,scroll){
 		var thisIndex = $(".heum-item-group").index(selector.find(".heum-item-group"));
 	    if(autoscroll){
-	    	clearTimeout(initSetTimeout[thisIndex]);
-	    	initSetTimeout[thisIndex] = setTimeout(function(){
-	        	rollingSubBridge(selector,autoscroll,timer,rolling,scroll);
+	    	clearTimeout(heumRollingInitSetTimeout[thisIndex]);
+	    	heumRollingInitSetTimeout[thisIndex] = setTimeout(function(){
+	    		heumRollingSubBridge(selector,autoscroll,timer,rolling,scroll);
 	        }, (timer*1000));     
 	    }else{
-	    	clearTimeout(initSetTimeout[thisIndex]);
+	    	clearTimeout(heumRollingInitSetTimeout[thisIndex]);
 	    	return false;
 	    }
 	    return false;
 	}
-	function rollingSubBridge(selector,autoscroll,timer,rolling,scroll){
+	function heumRollingSubBridge(selector,autoscroll,timer,rolling,scroll){
 		heum_rolling(selector,rolling,scroll);
-		rollingBridge(selector,autoscroll,timer,rolling,scroll);
+		heumRollingBridge(selector,autoscroll,timer,rolling,scroll);
 	}
 	function buttonDisabled(selector,disabled){
 		if(disabled){
@@ -116,68 +116,68 @@
 			}
 		}
 	}
- 	function next(selector){
+ 	function heumRollingNext(selector){
 		var thisIndex = $(".heum-item-group").index(selector.find(".heum-item-group"));
 		selector.find(".heum-item-group").clearQueue().finish();
-		rollingBridge(
+		heumRollingBridge(
 				selector,
 				false,
-				initOptions[thisIndex].timer,
-				initOptions[thisIndex].rolling,
-				initOptions[thisIndex].scroll
+				heumRollingInitOptions[thisIndex].timer,
+				heumRollingInitOptions[thisIndex].rolling,
+				heumRollingInitOptions[thisIndex].scroll
 		);
-		heum_rolling(selector,"next",initOptions[thisIndex].scroll);
-		if(scrollStatus[thisIndex]){
-			rollingBridge(
+		heum_rolling(selector,"next",heumRollingInitOptions[thisIndex].scroll);
+		if(heumRollingScrollStatus[thisIndex]){
+			heumRollingBridge(
 					selector,
 					true,
-					initOptions[thisIndex].timer,
-					initOptions[thisIndex].rolling,
-					initOptions[thisIndex].scroll
+					heumRollingInitOptions[thisIndex].timer,
+					heumRollingInitOptions[thisIndex].rolling,
+					heumRollingInitOptions[thisIndex].scroll
 					);
 		}
 	}
-	function prev(selector){
+	function heumRollingPrev(selector){
 		var thisIndex = $(".heum-item-group").index(selector.find(".heum-item-group"));
 		selector.find(".heum-item-group").clearQueue().finish();
-		rollingBridge(
+		heumRollingBridge(
 				selector,
 				false,
-				initOptions[thisIndex].timer,
-				initOptions[thisIndex].rolling,
-				initOptions[thisIndex].scroll
+				heumRollingInitOptions[thisIndex].timer,
+				heumRollingInitOptions[thisIndex].rolling,
+				heumRollingInitOptions[thisIndex].scroll
 		);
-		heum_rolling(selector,"prev",initOptions[thisIndex].scroll);
-		if(scrollStatus[thisIndex]){
-			rollingBridge(
+		heum_rolling(selector,"prev",heumRollingInitOptions[thisIndex].scroll);
+		if(heumRollingScrollStatus[thisIndex]){
+			heumRollingBridge(
 					selector,
 					true,
-					initOptions[thisIndex].timer,
-					initOptions[thisIndex].rolling,
-					initOptions[thisIndex].scroll
+					heumRollingInitOptions[thisIndex].timer,
+					heumRollingInitOptions[thisIndex].rolling,
+					heumRollingInitOptions[thisIndex].scroll
 			);
 		}
 	}
-	function start(selector){
+	function heumRollingStart(selector){
 		var thisIndex = $(".heum-item-group").index(selector.find(".heum-item-group"));
-		scrollStatus[thisIndex] = true;
-		rollingBridge(
+		heumRollingScrollStatus[thisIndex] = true;
+		heumRollingBridge(
 				selector,
 				true,
-				initOptions[thisIndex].timer,
-				initOptions[thisIndex].rolling,
-				initOptions[thisIndex].scroll
+				heumRollingInitOptions[thisIndex].timer,
+				heumRollingInitOptions[thisIndex].rolling,
+				heumRollingInitOptions[thisIndex].scroll
 		);
 	}
-	function pause(selector){
+	function heumRollingPause(selector){
 		var thisIndex = $(".heum-item-group").index(selector.find(".heum-item-group"));
-		scrollStatus[thisIndex] = false;
-		rollingBridge(
+		heumRollingScrollStatus[thisIndex] = false;
+		heumRollingBridge(
 				selector,
 				false,
-				initOptions[thisIndex].timer,
-				initOptions[thisIndex].rolling,
-				initOptions[thisIndex].scroll
+				heumRollingInitOptions[thisIndex].timer,
+				heumRollingInitOptions[thisIndex].rolling,
+				heumRollingInitOptions[thisIndex].scroll
 		);
 	}
 	
@@ -185,7 +185,7 @@
 		init : function() {
 			var defaults = defaults;
 			var element = $(this.element);
-			setInitOption(element,this.options);
+			heumRollingSetInitOption(element,this.options);
 			if(this.options.scroll=="vertical"){
 				var maxSize =  0;
 				var maxWidth = 0;
@@ -289,7 +289,7 @@
 				});
 			}
 			var thisIndex = $(".heum-item-group").index($(this).find(".heum-item-group"));
-			rollingBridge(
+			heumRollingBridge(
 					element,
 					this.options.autoscroll,
 					this.options.timer,
@@ -306,16 +306,16 @@
 			} else {
 				$.fn.extend({
 					next : function(){
-						next(this);
+						heumRollingNext(this);
 					},
 					prev : function(){
-						prev(this);
+						heumRollingPrev(this);
 					},
 					start : function(){
-						start(this);
+						heumRollingStart(this);
 					},
 					pause : function(){
-						pause(this);
+						heumRollingPause(this);
 					}
 				});
 			}
